@@ -24,14 +24,56 @@ class _TransactionUserState extends State<TransactionUser> {
       value: 211.30,
       date: DateTime.now(),
     ),
+    Transaction(
+      id: 't3',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't4',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't5',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't6',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't7',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't8',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't9',
+      title: 'Conta de Luz',
+      value: 211.30,
+      date: DateTime.now(),
+    ),
   ];
 
-  _addTransaction(String title, double value){
+  _addTransaction(String title, double value) {
     final newTransaction = Transaction(
       id: Random().nextDouble().toString(),
       title: title,
       value: value,
-      date: DateTime.now()
+      date: DateTime.now(),
     );
 
     setState(() {
@@ -42,10 +84,10 @@ class _TransactionUserState extends State<TransactionUser> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: <Widget> [
-        TransactionList(_transactions),
+      children: <Widget>[
         TransactionForm(_addTransaction),
-      ]
+        TransactionList(_transactions),
+      ],
     );
   }
 }
